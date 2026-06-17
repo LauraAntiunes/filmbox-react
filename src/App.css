@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #141414;
+  color: white;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background: rgba(0,0,0,0.9);
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff4fa3;
+}
+
+/* ================= HOME (CENTRALIZADA) ================= */
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, #141414, #000);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-content h1 {
+  font-size: 70px;
+  background: linear-gradient(90deg, #ff4fa3, #ff8bd1);
+
+  /* ✅ compatível */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  text-shadow:
+    0 0 10px rgba(255, 79, 163, 0.6),
+    0 0 25px rgba(255, 79, 163, 0.4);
+
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+.hero-content p {
+  color: #ccc;
+  max-width: 400px;
+}
+
+/* ================= BOTÃO ================= */
+button {
+  background: #ff4fa3;
+  border: none;
+  padding: 10px 18px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #e63e92;
+  transform: scale(1.05);
+}
+
+/* ================= PÁGINAS ================= */
+.page {
+  padding: 20px;
+}
+
+/* ================= CARD LIST (NETFLIX STYLE) ================= */
+.card-list {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+/* ================= CARD ================= */
+.card {
+  min-width: 200px;
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  background: #2a2a2a;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #bbb;
+}
+
+/* ================= FORM ================= */
+input, select {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  width: 250px;
+}
+
+/* ================= GLOW ANIMATION ================= */
+@keyframes glowPulse {
+  0% {
+    text-shadow:
+      0 0 10px rgba(255, 79, 163, 0.4),
+      0 0 20px rgba(255, 79, 163, 0.3);
+  }
+
+  50% {
+    text-shadow:
+      0 0 15px rgba(255, 79, 163, 0.8),
+      0 0 35px rgba(255, 79, 163, 0.6),
+      0 0 60px rgba(255, 79, 163, 0.4);
+  }
+
+  100% {
+    text-shadow:
+      0 0 10px rgba(255, 79, 163, 0.4),
+      0 0 20px rgba(255, 79, 163, 0.3);
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* camada de partículas */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* cada partícula */
+.particles span {
+  position: absolute;
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 79, 163, 0.6);
+  border-radius: 50%;
+  animation: float 10s linear infinite;
+}
+
+/* animação */
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.mouse-glow {
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 79, 163, 0.25),
+    transparent 60%
+  );
+
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  filter: blur(10px);
+}
