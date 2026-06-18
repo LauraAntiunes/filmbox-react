@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 import "./App.css"
 
 import Navbar from "./components/Navbar"
@@ -8,7 +8,7 @@ import Listagem from "./pages/Listagem"
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
 
       <Routes>
@@ -16,6 +16,6 @@ export default function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/listagem" element={<Listagem />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
