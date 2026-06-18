@@ -13,7 +13,7 @@ export default function Cadastro() {
     e.preventDefault()
 
     if (!titulo || !nota || !genero) {
-      setErro("Preencha todos os campos")
+      setErro("Todos os campos são obrigatórios")
       return
     }
 

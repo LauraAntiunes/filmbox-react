@@ -1,23 +1,25 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #141414;
-  color: white;
+ 
+  color: #333;
 }
 
 /* ================= NAVBAR ================= */
 nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   padding: 15px;
-  background: rgba(0,0,0,0.9);
+  background: white;
+  border-bottom: 1px solid #f0d7e6;
   position: sticky;
   top: 0;
 }
 
 nav a {
-  color: white;
+   color: #ff4fa3;
   text-decoration: none;
   font-weight: bold;
 }
@@ -33,7 +35,20 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to bottom, #141414, #000);
+ 
+}
+@media (max-width: 768px) {
+  nav {
+    padding: 10px;
+  }
+
+  .menu-btn {
+    margin-bottom: 5px;
+  }
+
+  .nav-links {
+    gap: 5px;
+  }
 }
 
 .hero-content {
@@ -56,14 +71,14 @@ nav a:hover {
   color: transparent;
 
   text-shadow:
-    0 0 10px rgba(255, 79, 163, 0.6),
-    0 0 25px rgba(255, 79, 163, 0.4);
+    0 0 8px rgba(255, 79, 163, 0.4),
+    0 0 16px rgba(255, 79, 163, 0.25);
 
   animation: glowPulse 2.5s ease-in-out infinite;
 }
 
 .hero-content p {
-  color: #ccc;
+   color: #666;
   max-width: 400px;
 }
 
@@ -73,6 +88,7 @@ button {
   border: none;
   padding: 10px 18px;
   color: white;
+  box-shadow: 0 4px 12px rgba(255, 79, 163, 0.3);
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
@@ -86,45 +102,57 @@ button:hover {
 
 /* ================= PÁGINAS ================= */
 .page {
-  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+}
+
+.page h2 {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 /* ================= CARD LIST (NETFLIX STYLE) ================= */
 .card-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
-  overflow-x: auto;
   padding: 10px 0;
 }
 
 /* ================= CARD ================= */
 .card {
-  min-width: 200px;
-  background: #222;
+  min-width: auto;
+  width: 100%;
+  background: #f5f5f5;
   padding: 15px;
   border-radius: 10px;
   transition: 0.3s;
-  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .card:hover {
-  transform: scale(1.08);
-  background: #2a2a2a;
+  transform: scale(1.05);
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(255, 79, 163, 0.2);
 }
 
 .card p {
   margin: 5px 0;
-  color: #bbb;
+  color: #666;
 }
 
 /* ================= FORM ================= */
-input, select {
+input,
+select {
   display: block;
   margin: 10px 0;
   padding: 8px;
   border-radius: 6px;
   border: none;
-  width: 250px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
 }
 
 /* ================= GLOW ANIMATION ================= */
@@ -205,4 +233,84 @@ body {
   transform: translate(-50%, -50%);
   z-index: 0;
   filter: blur(10px);
+}
+
+/* ================= RESPONSIVIDADE ================= */
+
+.menu-btn {
+  display: none;
+  background: #ff4fa3;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .nav-links.aberto {
+    display: flex;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .card {
+    min-width: 160px;
+  }
+}
+
+.error {
+  background: rgba(255, 79, 163, 0.15);
+  border: 1px solid #ff4fa3;
+  color: #ff8bd1;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 79, 163, 0.4);
+}
+
+.cadastro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.cadastro-box {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 79, 163, 0.15);
+}
+
+.cadastro-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
