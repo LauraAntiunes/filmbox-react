@@ -16,14 +16,17 @@ export default function Cadastro() {
       setErro("Todos os campos são obrigatórios")
       return
     }
+  adicionarFilme({
+    titulo,
+    nota: Number(nota), // 👈 AQUI
+    genero
+  })
 
-    adicionarFilme({ titulo, nota, genero })
-
-    setTitulo("")
-    setNota("")
-    setGenero("")
-    setErro("")
-  }
+  setTitulo("")
+  setNota("")
+  setGenero("")
+  setErro("")
+}
 
   return (
     <div className="cadastro-container">

@@ -5,9 +5,10 @@ export default function Listagem() {
   const { filmes, removerFilme } = useContext(FilmeContext)
 
   function stars(nota) {
-    const n = Math.round(Number(nota) / 2)
-    return "⭐".repeat(n) + "☆".repeat(5 - n)
-  }
+  const n = Number(nota)
+
+  return "⭐".repeat(n) + "☆".repeat(5 - n)
+}
 
   return (
     <div className="page">
