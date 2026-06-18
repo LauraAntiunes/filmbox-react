@@ -2,6 +2,7 @@
   "name": "filmbox-react",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://LauraAntiunes.github.io/filmbox-react"
   "type": "module",
   "scripts": {
     "dev": "vite",
