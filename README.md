@@ -1,3 +1,5 @@
+LINK PARA RODAR O SITE --> https://lauraantiunes.github.io/filmbox-react/
+
 🎯 Objetivo Geral
 
 Desenvolver uma aplicação web em React que implemente navegação, formulário com validação, listagem de dados e gerenciamento de estado compartilhado, simulando um cenário real de desenvolvimento frontend integrado a API REST.
