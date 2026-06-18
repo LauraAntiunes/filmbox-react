@@ -1,16 +1,31 @@
-# React + Vite
+🎯 Objetivo Geral
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Desenvolver uma aplicação web em React que implemente navegação, formulário com validação, listagem de dados e gerenciamento de estado compartilhado, simulando um cenário real de desenvolvimento frontend integrado a API REST.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+🧩 Requisitos Funcionais
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A aplicação deverá obrigatoriamente conter:
 
-## Expanding the ESLint configuration
+Menu de navegação com no mínimo três páginas (Início, Cadastro e Listagem) utilizando roteamento no React;
+Formulário controlado, com validação de campos e tratamento adequado de eventos;
+Listagem dinâmica de dados, com renderização múltipla;
+Gerenciamento de estado compartilhado entre páginas permitindo que dados cadastrados sejam refletidos na listagem;
+Integração com API REST para consumo e exibição de dados;
+Estilização com CSS externo e responsividade básica.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+📂 Entrega do Projeto
+
+O projeto deve conter:
+
+Repositório no GitHub;
+Organização das tarefas por meio de Kanban (GitHub Projects);
+Commits organizados e coerentes com a evolução do projeto;
+Aplicação executável localmente.
+
+
+📊 Critérios de Avaliação
+
+A avaliação será realizada com base na rubrica disponibilizada na atividade, a qual estabelece os critérios e os níveis de desempenho considerados na correção.
